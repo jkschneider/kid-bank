@@ -2,7 +2,6 @@ package com.learnwithted.kidbank.adapter.web.oauth2.google;
 
 import com.learnwithted.kidbank.domain.UserProfile;
 import com.learnwithted.kidbank.domain.UserProfileRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.AuthoritiesExtractor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -17,7 +16,7 @@ public class GoogleAuthoritiesExtractor implements AuthoritiesExtractor {
 
   private final UserProfileRepository userProfileRepository;
 
-  @Autowired
+
   public GoogleAuthoritiesExtractor(UserProfileRepository userProfileRepository) {
     this.userProfileRepository = userProfileRepository;
   }

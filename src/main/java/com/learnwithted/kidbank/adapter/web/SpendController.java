@@ -2,7 +2,6 @@ package com.learnwithted.kidbank.adapter.web;
 
 import com.learnwithted.kidbank.domain.Account;
 import com.learnwithted.kidbank.domain.UserProfile;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +18,7 @@ import java.time.LocalDateTime;
 @RequestMapping("/spend")
 public class SpendController extends TransactionController {
 
-  @Autowired
+
   public SpendController(Account account) {
     super(account);
   }
@@ -34,17 +33,17 @@ public class SpendController extends TransactionController {
 
   @PostMapping
   public String processSpendCommand(
-      @Valid @ModelAttribute("spendCommand") TransactionCommand spendDto,
+      @Valid @ModelAttribute TransactionCommand spendCommand,
       BindingResult bindingResult,
       @AuthenticationPrincipal UserProfile userProfile) {
     if (bindingResult.hasErrors()) {
       return "spend";
     }
 
-    int spendAmount = spendDto.amountInCents();
-    LocalDateTime dateTime = spendDto.getDateAsLocalDateTime();
+    int spendAmount = spendCommand.amountInCents();
+    LocalDateTime dateTime = spendCommand.getDateAsLocalDateTime();
 
-    account.spend(dateTime, spendAmount, spendDto.getDescription(), userProfile);
+    account.spend(dateTime, spendAmount, spendCommand.getDescription(), userProfile);
 
     return "redirect:" + AccountController.ACCOUNT_URL;
   }

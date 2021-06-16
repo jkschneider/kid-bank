@@ -3,7 +3,6 @@ package com.learnwithted.kidbank.adapter.web;
 import com.learnwithted.kidbank.adapter.ScaledDecimals;
 import com.learnwithted.kidbank.domain.Account;
 import com.learnwithted.kidbank.domain.Transaction;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +16,7 @@ import java.util.List;
 public class ImportCsvController {
   private final Account account;
 
-  @Autowired
+
   public ImportCsvController(Account account) {
     this.account = account;
   }

@@ -6,7 +6,6 @@ import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class TwilioTextMessageSender implements TextMessageSender {
   private final PhoneNumber twilioFromPhoneNumber;
 
-  @Autowired
+
   public TwilioTextMessageSender(TwilioConfig twilioConfig) {
     Twilio.init(twilioConfig.getAccountSid(), twilioConfig.getAuthToken());
     twilioFromPhoneNumber = new PhoneNumber(twilioConfig.getPhoneNumber());

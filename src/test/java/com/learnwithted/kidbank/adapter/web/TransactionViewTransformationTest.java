@@ -5,7 +5,7 @@ import com.learnwithted.kidbank.domain.Action;
 import com.learnwithted.kidbank.domain.DummyUserProfile;
 import com.learnwithted.kidbank.domain.Transaction;
 import com.learnwithted.kidbank.domain.UserProfile;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;

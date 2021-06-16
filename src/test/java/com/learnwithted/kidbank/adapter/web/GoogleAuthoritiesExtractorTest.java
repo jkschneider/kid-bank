@@ -2,7 +2,7 @@ package com.learnwithted.kidbank.adapter.web;
 
 import com.learnwithted.kidbank.adapter.web.oauth2.google.GoogleAuthoritiesExtractor;
 import com.learnwithted.kidbank.domain.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.HashMap;

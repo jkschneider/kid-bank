@@ -1,6 +1,6 @@
 package com.learnwithted.kidbank.domain;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static java.time.LocalDateTime.now;
 import static org.mockito.Mockito.mock;

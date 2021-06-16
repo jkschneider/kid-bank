@@ -8,7 +8,6 @@ import com.twilio.twiml.MessagingResponse;
 import com.twilio.twiml.messaging.Body;
 import com.twilio.twiml.messaging.Message;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -27,7 +26,7 @@ public class SmsController {
   private final CommandParser commandParser;
   private final UserProfileRepository userProfileRepository;
 
-  @Autowired
+
   public SmsController(Account account,
                        UserProfileRepository userProfileRepository) {
     commandParser = new CommandParser(account);

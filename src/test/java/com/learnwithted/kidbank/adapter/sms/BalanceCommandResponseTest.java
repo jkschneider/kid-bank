@@ -3,7 +3,7 @@ package com.learnwithted.kidbank.adapter.sms;
 import com.learnwithted.kidbank.domain.Account;
 import com.learnwithted.kidbank.domain.DummyUserProfile;
 import com.learnwithted.kidbank.domain.TestAccountBuilder;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 

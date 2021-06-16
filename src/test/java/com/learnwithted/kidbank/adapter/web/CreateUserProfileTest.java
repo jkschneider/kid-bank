@@ -3,7 +3,7 @@ package com.learnwithted.kidbank.adapter.web;
 import com.learnwithted.kidbank.domain.PhoneNumber;
 import com.learnwithted.kidbank.domain.Role;
 import com.learnwithted.kidbank.domain.UserProfile;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

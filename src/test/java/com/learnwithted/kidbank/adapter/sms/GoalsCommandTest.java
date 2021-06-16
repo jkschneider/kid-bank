@@ -4,7 +4,7 @@ import com.learnwithted.kidbank.domain.Account;
 import com.learnwithted.kidbank.domain.DummyUserProfile;
 import com.learnwithted.kidbank.domain.TestAccountBuilder;
 import com.learnwithted.kidbank.domain.TestClockSupport;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

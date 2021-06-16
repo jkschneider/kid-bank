@@ -6,7 +6,7 @@ import com.learnwithted.kidbank.domain.Role;
 import com.learnwithted.kidbank.domain.UserProfile;
 import com.learnwithted.kidbank.domain.UserProfileRepository;
 import com.learnwithted.kidbank.domain.WelcomerService;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;

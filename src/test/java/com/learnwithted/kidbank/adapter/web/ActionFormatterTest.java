@@ -1,7 +1,7 @@
 package com.learnwithted.kidbank.adapter.web;
 
 import com.learnwithted.kidbank.domain.Action;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

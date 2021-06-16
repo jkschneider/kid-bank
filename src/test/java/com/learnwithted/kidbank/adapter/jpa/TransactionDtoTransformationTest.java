@@ -1,7 +1,7 @@
 package com.learnwithted.kidbank.adapter.jpa;
 
 import com.learnwithted.kidbank.domain.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
 

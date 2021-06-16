@@ -3,7 +3,6 @@ package com.learnwithted.kidbank.adapter.web;
 import com.learnwithted.kidbank.app.Welcomer;
 import com.learnwithted.kidbank.domain.UserProfile;
 import com.learnwithted.kidbank.domain.UserProfileRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +21,7 @@ public class UserProfileController {
   private final UserProfileRepository userProfileRepository;
   private final Welcomer welcomer;
 
-  @Autowired
+
   public UserProfileController(UserProfileRepository userProfileRepository, Welcomer welcomer) {
     this.userProfileRepository = userProfileRepository;
     this.welcomer = welcomer;
@@ -41,15 +40,15 @@ public class UserProfileController {
   }
 
   @PostMapping("welcome")
-  public String sendWelcome(@RequestParam("id") Long profileId) {
-    if (profileId == null) {
+  public String sendWelcome(@RequestParam Long id) {
+    if (id == null) {
       throw new IllegalArgumentException("ID was null upon form submission.");
     }
-    if (!userProfileRepository.findById(profileId).isPresent()) {
-      throw new IllegalArgumentException("Profile ID " + profileId + " does not exist");
+    if (!userProfileRepository.findById(id).isPresent()) {
+      throw new IllegalArgumentException("Profile ID " + id + " does not exist");
     }
 
-    welcomer.welcome(profileId);
+    welcomer.welcome(id);
 
     return "redirect:" + AccountController.ACCOUNT_URL;
   }

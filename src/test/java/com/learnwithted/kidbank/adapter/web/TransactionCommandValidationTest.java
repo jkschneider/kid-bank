@@ -1,8 +1,8 @@
 package com.learnwithted.kidbank.adapter.web;
 
 import org.hibernate.validator.HibernateValidator;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 import javax.validation.ConstraintViolation;
@@ -16,7 +16,7 @@ public class TransactionCommandValidationTest {
 
   private LocalValidatorFactoryBean localValidatorFactory;
 
-  @Before
+  @BeforeEach
   public void setup() {
     localValidatorFactory = new LocalValidatorFactoryBean();
     localValidatorFactory.setProviderClass(HibernateValidator.class);

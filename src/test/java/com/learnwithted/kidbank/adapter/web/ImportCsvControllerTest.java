@@ -3,7 +3,7 @@ package com.learnwithted.kidbank.adapter.web;
 import com.learnwithted.kidbank.domain.Account;
 import com.learnwithted.kidbank.domain.TestAccountBuilder;
 import com.learnwithted.kidbank.domain.Transaction;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
 

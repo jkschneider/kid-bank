@@ -2,7 +2,7 @@ package com.learnwithted.kidbank.adapter.web;
 
 import com.learnwithted.kidbank.domain.Transaction;
 import org.assertj.core.util.Lists;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
 import java.util.List;

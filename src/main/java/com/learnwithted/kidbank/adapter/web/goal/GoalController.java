@@ -1,6 +1,5 @@
 package com.learnwithted.kidbank.adapter.web.goal;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +14,7 @@ public class GoalController {
 
   private final GoalService goalService;
 
-  @Autowired
+
   public GoalController(GoalService goalService) {
     this.goalService = goalService;
   }
@@ -31,7 +30,7 @@ public class GoalController {
   }
 
   @PostMapping("/goals/create")
-  public String createNewGoal(@Valid @ModelAttribute("createGoal") CreateGoal createGoal) {
+  public String createNewGoal(@Valid @ModelAttribute CreateGoal createGoal) {
     goalService.create(createGoal);
     return "redirect:/goals";
   }

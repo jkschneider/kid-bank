@@ -3,18 +3,17 @@ package com.learnwithted.kidbank.adapter.web;
 import com.learnwithted.kidbank.domain.Account;
 import com.learnwithted.kidbank.domain.DummyUserProfile;
 import com.learnwithted.kidbank.domain.TestAccountBuilder;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import java.math.BigDecimal;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.validation.BindingResult;
-
-import java.math.BigDecimal;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class DepositControllerTest {
 
   @Mock(stubOnly = true)

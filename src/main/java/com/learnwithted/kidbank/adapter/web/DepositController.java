@@ -2,7 +2,6 @@ package com.learnwithted.kidbank.adapter.web;
 
 import com.learnwithted.kidbank.domain.Account;
 import com.learnwithted.kidbank.domain.UserProfile;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +18,7 @@ import java.time.LocalDateTime;
 @RequestMapping("/deposit")
 public class DepositController extends TransactionController {
 
-  @Autowired
+
   public DepositController(Account account) {
     super(account);
   }
@@ -34,7 +33,7 @@ public class DepositController extends TransactionController {
 
   @PostMapping
   public String processDepositCommand(
-      @Valid @ModelAttribute("depositCommand") TransactionCommand depositCommand,
+      @Valid @ModelAttribute TransactionCommand depositCommand,
       Errors errors,
       @AuthenticationPrincipal UserProfile userProfile) {
     if (errors.hasErrors()) {

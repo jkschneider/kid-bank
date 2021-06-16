@@ -2,7 +2,6 @@ package com.learnwithted.kidbank.adapter.jpa;
 
 import com.learnwithted.kidbank.domain.Transaction;
 import com.learnwithted.kidbank.domain.TransactionRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +12,7 @@ class TransactionJpaAdapter implements TransactionRepository {
 
   private final TransactionDtoJpaRepository dtoJpaRepository;
 
-  @Autowired
+
   TransactionJpaAdapter(TransactionDtoJpaRepository dtoJpaRepository) {
     this.dtoJpaRepository = dtoJpaRepository;
   }
